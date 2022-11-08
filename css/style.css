@@ -1967,32 +1967,42 @@ input[type=number] {
   .testimonial-pop-up {
     position: fixed;
     z-index: 1;
-    animation: 0.3s ease-in-out;
+    animation: 0.3s;
   }
 
   .testimonial-pop-up-open {
     animation-name: opening;
+    animation-timing-function: ease-out;
     animation-fill-mode: forwards;
   }
 
   .testimonial-pop-up-close {
     animation-name: closing;
+    animation-timing-function: ease-in;
   }
 
   @keyframes opening {
     from {
       width: 0;
       height: 0;
+      padding-left: 0;
+      padding-bottom: 0;
+      padding-right: 0;
       top: 50%;
       left: 50%;
       box-shadow: 0px 329px 0px 1000px rgb(34 60 80 / 0);
+      opacity: 0;
     }
     to {
       width: 267px;
       height: 391px;
+      padding-left: 10px;
+      padding-bottom: 7px;
+      padding-right: 11px;
       top: calc(50% - 391px/2);
       left: calc(50% - 267px/2);
       box-shadow: 0px 329px 0px 1000px rgb(34 60 80 / 74%);
+      opacity: 1;
     }
   }
 
@@ -2000,16 +2010,24 @@ input[type=number] {
     from {
       width: 267px;
       height: 391px;
+      padding-left: 10px;
+      padding-bottom: 7px;
+      padding-right: 11px;
       top: calc(50% - 391px/2);
       left: calc(50% - 267px/2);
       box-shadow: 0px 329px 0px 1000px rgb(34 60 80 / 74%);
+      opacity: 1;
     }
     to {
       width: 0;
       height: 0;
+      padding-left: 0;
+      padding-bottom: 0;
+      padding-right: 0;
       top: 50%;
       left: 50%;
       box-shadow: 0px 329px 0px 1000px rgb(34 60 80 / 0);
+      opacity: 0;
     }
   }
 
